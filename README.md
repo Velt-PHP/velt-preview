@@ -29,4 +29,4 @@ Exclus :
 - [Issue 01 - Creer PreviewSession Store](issues/01-creer-preview-session-store.md)
 - [Issue 02 - Ajouter endpoints preview](issues/02-ajouter-endpoints-preview.md)
 - [Issue 03 - Integrer payload QR code CLI](issues/03-integrer-payload-qr-code-cli.md)
-
+- [Issue 04 - Valider le flux preview de bout en bout](issues/04-valider-flux-preview-bout-en-bout.md)
