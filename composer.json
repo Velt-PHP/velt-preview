@@ -8,6 +8,8 @@
             "PreviewSessionStore\\": "preview-session-store/src/",
             "PreviewEndpoints\\": "preview-endpoints/src/",
             "PreviewQrCli\\": "preview-qr-cli/src/",
+            "PreviewFlowE2E\\": "preview-flow-e2e/src/",
+            "PreviewJsonContract\\": "preview-json-contract/src/",
             "VeltAst\\": "velt-ast/src/",
             "VeltParser\\": "velt-parser/src/",
             "VeltView\\": "velt-view/src/"

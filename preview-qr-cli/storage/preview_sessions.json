@@ -68,5 +68,19 @@
         "url": "http://127.0.0.1:8000/api/preview/c5a9c7e38965",
         "createdAt": "2026-06-17T01:05:02+00:00",
         "expiresAt": null
+    },
+    "016684e8c953": {
+        "id": "016684e8c953",
+        "view": "auth.login",
+        "url": "http://127.0.0.1:8000/api/preview/016684e8c953",
+        "createdAt": "2026-06-17T10:09:48+00:00",
+        "expiresAt": null
+    },
+    "936b1ee20e83": {
+        "id": "936b1ee20e83",
+        "view": "auth.login",
+        "url": "http://127.0.0.1:8000/api/preview/936b1ee20e83",
+        "createdAt": "2026-06-17T10:14:30+00:00",
+        "expiresAt": null
     }
 }
