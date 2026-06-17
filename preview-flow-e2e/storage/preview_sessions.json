@@ -68,5 +68,47 @@
         "url": "http://127.0.0.1:8000/api/preview/ed6bf675fb1c",
         "createdAt": "2026-05-25T08:11:55+00:00",
         "expiresAt": null
+    },
+    "307484e44c12": {
+        "id": "307484e44c12",
+        "view": "auth.login",
+        "url": "http://127.0.0.1:8000/api/preview/307484e44c12",
+        "createdAt": "2026-06-11T15:51:19+00:00",
+        "expiresAt": null
+    },
+    "65a83e9b9bab": {
+        "id": "65a83e9b9bab",
+        "view": "missing.view",
+        "url": "http://127.0.0.1:8000/api/preview/65a83e9b9bab",
+        "createdAt": "2026-06-11T15:51:19+00:00",
+        "expiresAt": null
+    },
+    "d3fc0dd8c97d": {
+        "id": "d3fc0dd8c97d",
+        "view": "auth.login",
+        "url": "http://127.0.0.1:8000/api/preview/d3fc0dd8c97d",
+        "createdAt": "2026-06-11T15:52:08+00:00",
+        "expiresAt": null
+    },
+    "143b67561442": {
+        "id": "143b67561442",
+        "view": "missing.view",
+        "url": "http://127.0.0.1:8000/api/preview/143b67561442",
+        "createdAt": "2026-06-11T15:52:08+00:00",
+        "expiresAt": null
+    },
+    "afee15245815": {
+        "id": "afee15245815",
+        "view": "auth.login",
+        "url": "http://127.0.0.1:8000/api/preview/afee15245815",
+        "createdAt": "2026-06-16T21:30:07+00:00",
+        "expiresAt": null
+    },
+    "3d9d4e27d924": {
+        "id": "3d9d4e27d924",
+        "view": "missing.view",
+        "url": "http://127.0.0.1:8000/api/preview/3d9d4e27d924",
+        "createdAt": "2026-06-16T21:30:07+00:00",
+        "expiresAt": null
     }
 }

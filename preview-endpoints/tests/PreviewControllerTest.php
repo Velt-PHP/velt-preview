@@ -2,8 +2,8 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-use PreviewEndpoints\Http\PreviewController;
 use PreviewContracts\PreviewPage;
+use PreviewEndpoints\Http\PreviewController;
 use PreviewEndpoints\Renderer\ArrayJsonRenderer;
 use PreviewEndpoints\Repository\ArrayPageRepository;
 use PreviewSessionStore\PreviewSessionStore;
@@ -20,8 +20,6 @@ mkdir($tmpDir, 0775, true);
 
 try {
     $store = new PreviewSessionStore($tmpDir);
-    $session = $store->create('auth.login', 'http://127.0.0.1:8000');
-
     $repository = new ArrayPageRepository([
         'auth.login' => new PreviewPage('auth.login', [
             ['type' => 'text', 'name' => 'title', 'value' => 'Login'],
@@ -30,6 +28,7 @@ try {
     ]);
 
     $controller = new PreviewController($store, $repository, new ArrayJsonRenderer());
+    $session = $store->create('auth.login', 'http://127.0.0.1:8000');
 
     $sessionResponse = $controller->session($session->id);
     ensure($sessionResponse->statusCode === 200, 'Expected session endpoint to return 200');
@@ -67,3 +66,4 @@ try {
     }
     @rmdir($tmpDir);
 }
+

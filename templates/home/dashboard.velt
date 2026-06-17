@@ -1,0 +1,6 @@
+VStack class="flex-1 p-4"
+  Text value="Dashboard" class="text-2xl font-bold mb-4"
+  HStack class="mb-4"
+    Text value="Bienvenue" class="text-lg"
+    Text value="User" class="text-gray-600"
+  Button text="Déconnexion" class="bg-red-500 text-white"

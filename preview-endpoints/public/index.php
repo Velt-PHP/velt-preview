@@ -1,24 +1,20 @@
 <?php
 
-require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/../../vendor/autoload.php';
 
 use PreviewEndpoints\Http\PreviewController;
 use PreviewEndpoints\Http\PreviewErrorResponse;
 use PreviewEndpoints\Http\Request;
-use PreviewContracts\PreviewPage;
 use PreviewEndpoints\Renderer\ArrayJsonRenderer;
-use PreviewEndpoints\Repository\ArrayPageRepository;
+use PreviewEndpoints\VeltPageRepositoryFactory;
 use PreviewSessionStore\PreviewSessionStore;
 
 $request = Request::fromGlobals();
 $store = new PreviewSessionStore(__DIR__ . '/../storage');
 
-$repository = new ArrayPageRepository([
-    'auth.login' => new PreviewPage('auth.login', [
-        ['type' => 'text', 'name' => 'title', 'value' => 'Login'],
-        ['type' => 'button', 'name' => 'submit', 'label' => 'Sign in'],
-    ], ['title' => 'Login screen']),
-]);
+// Use VeltPageRepository to load .velt templates
+$templatesPath = __DIR__ . '/../../templates';
+$repository = VeltPageRepositoryFactory::create($templatesPath);
 
 $controller = new PreviewController($store, $repository, new ArrayJsonRenderer());
 

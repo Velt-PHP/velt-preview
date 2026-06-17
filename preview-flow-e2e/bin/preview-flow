@@ -1,6 +1,18 @@
 #!/usr/bin/env php
 <?php
 
+require_once dirname(__DIR__, 2) . '/preview-session-store/src/PreviewSession.php';
+require_once dirname(__DIR__, 2) . '/preview-session-store/src/Exceptions/PreviewSessionNotFoundException.php';
+require_once dirname(__DIR__, 2) . '/preview-session-store/src/PreviewSessionStore.php';
+require_once dirname(__DIR__, 2) . '/preview-contracts/src/PreviewPage.php';
+require_once dirname(__DIR__, 2) . '/preview-contracts/src/Contracts/JsonRendererInterface.php';
+require_once dirname(__DIR__, 2) . '/preview-contracts/src/Contracts/PageRepositoryInterface.php';
+require_once dirname(__DIR__, 2) . '/preview-contracts/src/Contract/PreviewSchema.php';
+require_once dirname(__DIR__, 2) . '/preview-endpoints/src/Http/Response.php';
+require_once dirname(__DIR__, 2) . '/preview-endpoints/src/Http/PreviewErrorResponse.php';
+require_once dirname(__DIR__, 2) . '/preview-endpoints/src/Renderer/ArrayJsonRenderer.php';
+require_once dirname(__DIR__, 2) . '/preview-endpoints/src/Repository/ArrayPageRepository.php';
+require_once dirname(__DIR__, 2) . '/preview-endpoints/src/Http/PreviewController.php';
 require __DIR__ . '/../vendor/autoload.php';
 
 use PreviewFlowE2E\PreviewFlowRunner;

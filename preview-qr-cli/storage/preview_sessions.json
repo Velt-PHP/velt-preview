@@ -1,9 +1,72 @@
 {
-    "472fd3d39fa6": {
-        "id": "472fd3d39fa6",
+    "3643da4e7909": {
+        "id": "3643da4e7909",
         "view": "auth.login",
-        "url": "http://127.0.0.1:8000/api/preview/472fd3d39fa6",
-        "createdAt": "2026-05-21T12:05:06+00:00",
+        "url": "http://127.0.0.1:8000/api/preview/3643da4e7909",
+        "createdAt": "2026-06-16T21:30:05+00:00",
+        "expiresAt": null
+    },
+    "cd6ed59b1395": {
+        "id": "cd6ed59b1395",
+        "view": "auth.login",
+        "url": "http://127.0.0.1:8000/api/preview/cd6ed59b1395",
+        "createdAt": "2026-06-16T23:33:01+00:00",
+        "expiresAt": null
+    },
+    "7565e4817bc8": {
+        "id": "7565e4817bc8",
+        "view": "auth.login",
+        "url": "http://127.0.0.1:8000/api/preview/7565e4817bc8",
+        "createdAt": "2026-06-16T23:53:47+00:00",
+        "expiresAt": null
+    },
+    "f23ae5d25f64": {
+        "id": "f23ae5d25f64",
+        "view": "auth.login",
+        "url": "http://127.0.0.1:8000/api/preview/f23ae5d25f64",
+        "createdAt": "2026-06-17T00:35:41+00:00",
+        "expiresAt": null
+    },
+    "67359d317bbf": {
+        "id": "67359d317bbf",
+        "view": "auth.login",
+        "url": "http://127.0.0.1:8000/api/preview/67359d317bbf",
+        "createdAt": "2026-06-17T00:38:03+00:00",
+        "expiresAt": null
+    },
+    "a5f1b84373f8": {
+        "id": "a5f1b84373f8",
+        "view": "auth.login",
+        "url": "http://127.0.0.1:8000/api/preview/a5f1b84373f8",
+        "createdAt": "2026-06-17T00:39:34+00:00",
+        "expiresAt": null
+    },
+    "67955d336809": {
+        "id": "67955d336809",
+        "view": "auth.login",
+        "url": "http://127.0.0.1:8000/api/preview/67955d336809",
+        "createdAt": "2026-06-17T00:42:59+00:00",
+        "expiresAt": null
+    },
+    "7de7d6955eba": {
+        "id": "7de7d6955eba",
+        "view": "home.dashboard",
+        "url": "http://127.0.0.1:8000/api/preview/7de7d6955eba",
+        "createdAt": "2026-06-17T00:46:17+00:00",
+        "expiresAt": null
+    },
+    "0d808a45e1f3": {
+        "id": "0d808a45e1f3",
+        "view": "auth.login",
+        "url": "http://127.0.0.1:8000/api/preview/0d808a45e1f3",
+        "createdAt": "2026-06-17T00:58:41+00:00",
+        "expiresAt": null
+    },
+    "c5a9c7e38965": {
+        "id": "c5a9c7e38965",
+        "view": "auth.login",
+        "url": "http://127.0.0.1:8000/api/preview/c5a9c7e38965",
+        "createdAt": "2026-06-17T01:05:02+00:00",
         "expiresAt": null
     }
 }

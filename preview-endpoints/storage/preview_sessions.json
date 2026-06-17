@@ -1,0 +1,9 @@
+{
+    "bb9f82d1210b": {
+        "id": "bb9f82d1210b",
+        "view": "auth.login",
+        "url": "http://127.0.0.1:8000/api/preview/bb9f82d1210b",
+        "createdAt": "2026-06-16T23:33:12+00:00",
+        "expiresAt": null
+    }
+}
