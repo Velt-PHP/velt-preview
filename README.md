@@ -1,5 +1,16 @@
 # Sous-module 06 - Preview API
 
+## Gestion des dépendances
+
+Les dépendances sont **centralisées** au niveau du dossier `velt-preview` :
+
+```bash
+cd velt-preview
+composer install
+```
+
+Un seul `composer.json` gère toutes les dépendances des 7 sous-modules.
+
 ## Mission
 
 Ce sous-module connecte le monde Web et le monde mobile preview. Il gere les sessions de preview, expose les endpoints JSON et fournit les donnees necessaires au QR code.
@@ -19,7 +30,11 @@ Inclus :
 - payload QR code ;
 - stockage fichier simple pour le MVP ;
 - schema JSON preview versionne ;
-- erreurs 404/410/500 normalisees.
+- erreurs 404/410/500 normalisees ;
+- **parser Velt pour fichiers .velt** ;
+- **structure AST pour les composants** ;
+- **VeltView avec fromSession() et toJson()** ;
+- **génération d'image QR code (SVG)**.
 
 Exclus :
 
@@ -40,6 +55,53 @@ Le Module 1 n'a pas besoin d'une vraie app mobile pour valider Preview.
 - Verifier que le payload QR-ready contient une URL HTTP exploitable et l'identifiant de session.
 
 Le test bout-en-bout avec le vrai UI et le vrai HTTP appartient au sous-module 07. Les tests unitaires de Preview doivent rester rapides et isolables.
+
+## Architecture des nouveaux modules
+
+### velt-ast
+Structure de l'AST (Abstract Syntax Tree) pour les composants Velt :
+- `NodeInterface` - Interface de base pour tous les nœuds
+- `VStack`, `HStack` - Conteneurs vertical/horizontal
+- `Text`, `Button`, `Input` - Composants de base
+- `Container` - Conteneur générique
+- `AST` - Racine de l'arbre avec méthode `toArray()`
+
+### velt-parser
+Parser pour les fichiers `.velt` :
+- `VeltParser` - Transforme le contenu d'un fichier .velt en AST
+- Supporte l'indentation pour la structure hiérarchique
+- Parse les props au format `key="value"`
+
+### velt-view
+Couche de chargement et rendu des vues :
+- `VeltView` - Classe principale avec `fromSession()` et `toJson()`
+- `VeltPageRepository` - Repository implémentant `PageRepositoryInterface`
+- Charge les fichiers `.velt` depuis le système de fichiers
+
+### Format des fichiers .velt
+
+```velt
+VStack class="flex-1 p-4"
+  Text value="Se connecter" class="text-2xl font-bold mb-4"
+  Input name="email" label="Email" type="email" class="mb-4"
+  Input name="password" label="Mot de passe" type="password" class="mb-4"
+  Button text="Connexion" class="bg-blue-500 text-white"
+```
+
+### Flux complet
+
+```
+fichier .velt → VeltParser → AST → VeltView::toJson() → JSON → API Preview
+```
+
+### Génération QR code
+
+Le module Preview utilise la librairie `bacon/bacon-qr-code` pour générer des images QR code au format SVG :
+
+- **CLI** : `php bin/velt preview auth.login` génère un fichier SVG
+- **Service** : `preview.qr_generator` disponible dans le container
+- **Formats** : SVG par défaut (extension PNG disponible si GD/Imagick installé)
+- **Stockage** : `storage/qrcodes/{session_id}.svg`
 
 ## Issues
 

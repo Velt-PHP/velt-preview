@@ -1,9 +1,13 @@
 #!/usr/bin/env php
 <?php
 
+require_once dirname(__DIR__, 2) . '/preview-contracts/src/PreviewPage.php';
+require_once dirname(__DIR__, 2) . '/preview-contracts/src/Contracts/JsonRendererInterface.php';
+require_once dirname(__DIR__, 2) . '/preview-contracts/src/Contract/PreviewSchema.php';
+require_once dirname(__DIR__, 2) . '/preview-endpoints/src/Http/Response.php';
 require __DIR__ . '/../vendor/autoload.php';
 
-use PreviewEndpoints\PreviewPage;
+use PreviewContracts\PreviewPage;
 use PreviewJsonContract\Error\PreviewErrorType;
 use PreviewJsonContract\Http\PreviewContractResponse;
 use PreviewJsonContract\Renderer\ContractJsonRenderer;

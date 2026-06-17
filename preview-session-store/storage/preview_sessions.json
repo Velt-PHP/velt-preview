@@ -1,0 +1,23 @@
+{
+    "472fd3d39fa6": {
+        "id": "472fd3d39fa6",
+        "view": "auth.login",
+        "url": "http://127.0.0.1:8000/api/preview/472fd3d39fa6",
+        "createdAt": "2026-05-21T12:05:06+00:00",
+        "expiresAt": null
+    },
+    "ba6b80215887": {
+        "id": "ba6b80215887",
+        "view": "auth.login",
+        "url": "http://127.0.0.1:8000/api/preview/ba6b80215887",
+        "createdAt": "2026-06-11T15:51:19+00:00",
+        "expiresAt": null
+    },
+    "222b69b2c4e7": {
+        "id": "222b69b2c4e7",
+        "view": "auth.login",
+        "url": "http://127.0.0.1:8000/api/preview/222b69b2c4e7",
+        "createdAt": "2026-06-11T15:52:08+00:00",
+        "expiresAt": null
+    }
+}
