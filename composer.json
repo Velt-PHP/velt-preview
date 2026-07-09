@@ -24,6 +24,6 @@
         "phpunit/phpunit": "^10.0"
     },
     "bin": [
-        "preview-qr-cli/bin/velt"
+        "preview-qr-cli/bin/velt-preview"
     ]
 }
